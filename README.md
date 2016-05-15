@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pynfft-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pynfft-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pynfft-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pynfft-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pynfft-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pynfft-feedstock/branch/master)
