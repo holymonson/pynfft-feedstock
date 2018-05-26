@@ -4,4 +4,4 @@
 echo "[build_ext]" > setup.cfg
 echo "include-dirs=$PREFIX/include/" >> setup.cfg
 
-python setup.py install --single-version-externally-managed --record record.txt
+python -m pip install --no-deps --ignore-installed .
