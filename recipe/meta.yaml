@@ -8,6 +8,9 @@ source:
   fn: pyNFFT-{{ version }}.tar.bz2
   url: https://pypi.io/packages/source/p/pyNFFT/pyNFFT-{{ version }}.tar.gz
   md5: d2457a3f43839a8acce3295c60d5e692
+  patches:
+    # remove -malign-double compiler flag (for clang)
+    - osx_flags.patch
 
 build:
   number: 1001
