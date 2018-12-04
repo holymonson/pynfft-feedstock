@@ -8,28 +8,27 @@ source:
   fn: pyNFFT-{{ version }}.tar.bz2
   url: https://pypi.io/packages/source/p/pyNFFT/pyNFFT-{{ version }}.tar.gz
   md5: d2457a3f43839a8acce3295c60d5e692
+  patches:
+    # remove -malign-double compiler flag (for clang)
+    - osx_flags.patch  # [osx]
 
 build:
-  number: 1
+  number: 1001
   skip: True  # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
+    - cython
     - python
     - pip
-    - numpy 1.8.*   # [not (win and (py35 or py36))]
-    - numpy 1.9.*   # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy
     - nfft >=3.2,<3.3
-    - gcc
-    - cython
   run:
     - python
-    - numpy >=1.8   # [not (win and (py35 or py36))]
-    - numpy >=1.9   # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - nfft >=3.2,<3.3
-    - libgcc
 
 test:
   imports:

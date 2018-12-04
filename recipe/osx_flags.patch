@@ -1,0 +1,11 @@
+--- setup.py
++++ setup.py
+@@ -34,7 +34,7 @@ def get_common_extension_args():
+         libraries=['nfft3_threads', 'nfft3', 'fftw3_threads', 'fftw3', 'm'],
+         library_dirs=[],
+         include_dirs=[numpy.get_include()],
+-        extra_compile_args='-O3 -fomit-frame-pointer -malign-double '
++        extra_compile_args='-O3 -fomit-frame-pointer '
+         '-fstrict-aliasing -ffast-math'.split(),
+         )
+     return common_extension_args
