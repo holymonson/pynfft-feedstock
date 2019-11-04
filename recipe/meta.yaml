@@ -39,6 +39,7 @@ test:
 about:
   home: https://github.com/ghisvail/pyNFFT.git
   license: GPLv3
+  license_file: COPYING.txt
   summary: Pythonic bindings around the NFFT library
 
 extra:
