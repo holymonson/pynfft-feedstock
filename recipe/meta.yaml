@@ -24,11 +24,11 @@ requirements:
     - python
     - pip
     - numpy
-    - nfft >=3.2,<3.3
+    - nfft >=3.2,<3.6
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - nfft >=3.2,<3.3
+    - nfft >=3.2,<3.6
 
 test:
   imports:
